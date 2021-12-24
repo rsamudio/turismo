@@ -1,0 +1,497 @@
+/* Reset */
+#addsearch-results,
+#addsearch-results-right,
+#addsearch-results-mid,
+#addsearch-results-bottom,
+#addsearch-results img,
+#addsearch-results div div,
+#addsearch-results a,
+#addsearch-results a img,
+#addsearch-results h1,
+#addsearch-results h1 a,
+#addsearch-results p,
+#addsearch-results p span,
+#addsearch-results em,
+#addsearch-results p em,
+#addsearch-results p span em,
+#addsearch-results p a,
+#addsearch-results table,
+#addsearch-results table tr,
+#addsearch-results table tr td,
+#addsearch-scroll,
+#addsearch-scroll-handle,
+#addsearch-mobile-field,
+#addsearch-load-more,
+#addsearch-demo,
+#addsearch-fuzzy,
+#addsearch-edit,
+#addsearch-results div.addsearch-divider {
+  color:#000;
+  background: transparent url() no-repeat top left;
+  margin:0;
+  padding:0;
+  border:0;
+  border-collapse:collapse;
+  border-spacing:0;
+  font-variant:normal;
+  font-style:normal;
+  font-size:100%;
+  font-weight:normal;
+  text-align:left;
+  text-decoration: none;
+  vertical-align:text-top;
+  letter-spacing: normal;
+  float: none;
+  line-height:normal;
+  box-sizing:content-box;
+  -moz-box-sizing:content-box;
+}
+#addsearch-results img,
+#addsearch-results a,
+#addsearch-results a img,
+#addsearch-results h1 a,
+#addsearch-results p span,
+#addsearch-results em,
+#addsearch-results p em,
+#addsearch-results p span em,
+#addsearch-results p a,
+#addsearch-load-more span,
+#addsearch-demo span,
+#addsearch-fuzzy span,
+#addsearch-results div.addsearch-divider span {
+  display: inline;
+  box-sizing:content-box;
+  -moz-box-sizing:content-box;
+}
+
+/* Input field, remove IE X */
+input.addsearch::-ms-clear { visibility: hidden; }
+
+/* Use #'s everywhere so page's css won't overwrite this */
+#addsearch-results {
+  background: #fff;
+  position: absolute;
+  font-family: Helvetica,Arial;
+  font-size: 13px;
+  line-height: 16px;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Desktop specific result container styles */
+#addsearch-results.addsearch-d {
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.45);
+  width: 776px; /* Was 764 */
+  height: 576px;
+  border: 2px solid #dadada;
+}
+
+#addsearch-results-mid {
+  height: 544px;
+  width: 796px;
+  overflow: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: transparent url( //addsearch.com/www/script/beta/bg-border1.gif ) repeat-y 585px 0;
+  -webkit-overflow-scrolling: touch;
+}
+#addsearch-results-right {
+  position: absolute;
+  top: 0;
+  margin-left: 588px;
+  height: 544px;
+  width: 186px;
+  border-left: 2px solid transparent;
+  background-color: #fff;
+}
+#addsearch-results-right table {
+  width: auto;
+}
+#addsearch-results-right img {
+  margin: 0;
+  padding: 0;
+}
+
+#addsearch-edit {
+  width: 150px;
+  margin-top: 20px;
+}
+
+/* Scroll bar only on desktop */
+#addsearch-results #addsearch-scroll { display: none; }
+#addsearch-results.addsearch-d #addsearch-scroll {
+  display: block;
+  float: right;
+  height: 544px;
+  width: 12px;
+  background-color: #f6f6f6;
+}
+#addsearch-results.addsearch-d #addsearch-scroll-handle {
+  margin: 1px;
+  width: 8px;
+  height: 200px;
+  border: 1px solid #ccc;
+  background-color: #ddd;
+  position: relative;
+  top: 0;
+}
+#addsearch-results-right #addsearch-scroll-handle:hover {
+  background-color: #ccc;
+}
+
+/* Bottom */
+#addsearch-results-bottom {
+  height: 22px;
+  padding-top: 8px;
+  background-color: #fff;
+  color: #999;
+  border-top: 2px solid #ececec;
+  text-transform: uppercase;
+  font-family: Helvetica,Arial;
+  font-size: 13px;
+  line-height: 16px;
+}
+#addsearch-results-bottom a img {
+  margin: 0 0 0 8px;
+  padding: 0;
+  border: none;
+}
+#addsearch-nohits {
+  width: 585px;
+  border-bottom: 2px solid #ececec;
+  border-right: 2px solid #ececec;
+  background: #fff url() no-repeat top left;
+}
+#addsearch-nohits p {
+  padding: 12px 0 12px 12px; margin: 0;
+}
+#addsearch-nohits p em {
+  font-weight: bold;
+  font-style: normal;
+}
+#addsearch-results .addsearch-result-item-container {
+  background: transparent url() no-repeat 8px 50%;
+  background-size: 136px auto;
+}
+#addsearch-results .addsearch-result-item-sub {
+  width: 585px;
+  min-height: 152px;
+  border-bottom: 2px solid #ececec;
+  border-right: 2px solid #ececec;
+  background: transparent url() no-repeat 8px 50%;
+  background-size: 136px auto;
+  cursor: pointer;
+}
+#addsearch-results .addsearch-result-item-sub-active {
+  width: 587px;
+  border-right: none;
+  background-color: #eee;
+  background-color: rgba(25, 85, 141, 0.15);
+}
+#addsearch-results .addsearch-result-item-sub-active div {
+  background: transparent url( //addsearch.com/www/script/beta/arrow.png ) no-repeat right 50%;
+}
+#addsearch-results .addsearch-result-item-sub div {
+  width: 415px;
+  margin-top: 0px;
+  min-height: 154px;
+  padding: 0 14px 0 160px;
+  -moz-box-sizing:content-box;
+}
+#addsearch-results .addsearch-result-item-sub h1 {
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+#addsearch-results .addsearch-result-item-sub h1 a {
+  color: #19558d;
+  padding: 16px 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  /* IE bug fixing */
+  display: block;
+  vertical-align: top;
+}
+#addsearch-results .addsearch-result-item-sub p {
+  padding: 0 12px 0 0;
+  margin: 0;
+}
+#addsearch-results .addsearch-result-item-sub p span {
+  display: block;
+  margin-top: 16px;
+}
+#addsearch-results .addsearch-result-item-sub p span em {
+  text-transform: uppercase;
+  color: #9a9a9a;
+  font-size: 12px;
+}
+#addsearch-results .addsearch-result-item-sub p span.doc_date em {
+  text-transform: none;
+}
+#addsearch-results .addsearch-result-item-sub p em {
+  font-weight: bold;
+  font-style: normal;
+}
+#addsearch-results .addsearch-result-item-sub p em.fuzzy {
+  font-weight: bold;
+  font-style: italic;
+  color: #444;
+}
+#addsearch-results .addsearch-result-item-sub p span.price {
+  float: right;
+  font-size: 18px;
+  color: #080;
+}
+
+
+/* Tablet specific rules */
+#addsearch-results.addsearch-t {
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.45);
+  width: 580px;
+  height: 576px;
+  border: 2px solid #dadada;
+}
+#addsearch-results.addsearch-t .addsearch-result-item-sub {
+  width: 578px;
+}
+#addsearch-results.addsearch-t .addsearch-result-item-sub-active {
+  width: 580px;
+}
+#addsearch-results.addsearch-t .addsearch-result-item-sub-active div, #addsearch-results.addsearch-t .addsearch-result-item-sub div {
+  width: 415px;
+  padding: 0 5px 0 160px;
+}
+#addsearch-results.addsearch-t #addsearch-results-right {
+  display: none;
+}
+
+
+/* Mobile specific rules */
+#addsearch-results.addsearch-m {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*padding-top: 42px;*/
+  border: none;
+}
+
+#addsearch-mobile-wrapper #header {
+  display: block;
+}
+
+
+/* Mobile load more link */
+#addsearch-load-more {
+  height: 100px;
+}
+#addsearch-load-more a {
+  display: block;
+  text-align: center;
+  padding: 20px 0;
+  margin: 10px auto;
+  width: 80%;
+  background-color: #eee;
+  border: 1px solid #ddd;
+}
+#addsearch-demo {
+  height: 101px;
+  width: 585px;
+}
+#addsearch-demo span {
+  display: block;
+  padding: 35px 50px 0 50px;
+  margin: 0;
+  height: 101px;
+  color: #00b0b9;
+  font-size: 15px;
+  background: #f7f7f7 url( //addsearch.com/www/script/beta/placeholder1.gif ) no-repeat center center;
+  border-bottom: 2px solid #ececec;
+}
+#addsearch-fuzzy,
+#addsearch-results div.addsearch-divider {
+  height: 28px;
+  width: 585px;
+  clear: both;
+}
+#addsearch-results.addsearch-m div.addsearch-divider {
+  width: 100%;
+}
+#addsearch-fuzzy span,
+#addsearch-results div.addsearch-divider span {
+  display: block;
+  text-align: center;
+  padding: 8px 0 0 0;
+  margin: 0;
+  height: 20px;
+  font-size: 11px;
+  line-height: 11px;
+  background-color: #f7f7f7;
+  border-bottom: 2px solid #ececec;
+}
+
+#addsearch-results div.addsearch-divider-noresults span {
+  border-bottom: none;
+  background-color: transparent;
+}
+
+#addsearch-results.addsearch-m #addsearch-results-mid {
+  height: 100%;
+}
+#addsearch-results.addsearch-m .addsearch-result-item-sub,
+#addsearch-results.addsearch-m .addsearch-result-item-sub-active {
+  width: 100%;
+  border-right: none;
+}
+#addsearch-results.addsearch-m .addsearch-result-item-sub-active div,
+#addsearch-results.addsearch-m .addsearch-result-item-sub div {
+  background: none;
+  width: auto;
+}
+
+#addsearch-results.addsearch-m #addsearch-results-bottom {
+  display: none;
+}
+
+
+#addsearch-results.addsearch-m .addsearch-result-item-container {
+  background: transparent url() no-repeat 0 0;
+  background-size: 106px auto;
+}
+#addsearch-results.addsearch-m .addsearch-result-item-sub {
+  background: transparent url() no-repeat 0 0;
+  background-size: 106px auto;
+  min-height: 106px;
+}
+#addsearch-results.addsearch-m .addsearch-result-item-sub div {
+  min-height: 106px;
+  padding-left: 118px;
+  padding-bottom: 20px;
+}
+#addsearch-results.addsearch-m #addsearch-results-right {
+  display: none;
+}
+
+#addsearch-results.addsearch-m .addsearch-result-item-sub h1 a {
+  padding: 12px 0;
+}
+#addsearch-results.addsearch-m .addsearch-result-item-sub p {
+  padding: 0 5px 0 0;
+}
+#addsearch-results.addsearch-m .addsearch-result-item-sub p span {
+  margin-top: 12px;
+  font-size: 10px;
+}
+/* Hide close link from bottom */
+#addsearch-results.addsearch-m #addsearch-closelink {
+  display: none;
+}
+#addsearch-mobile-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px; height: 38px;
+  background: #fff url( //addsearch.com/www/script/v2/mobile-close1.gif ) no-repeat 50% 50%;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+
+
+
+/* Babbler */
+
+#addsearch-results #addsearch-babbler {
+   min-height: 60px;
+   width: 585px;
+ }
+#addsearch-results.addsearch-m #addsearch-babbler {
+  width: 100%;
+}
+
+  /* Wrapper */
+#addsearch-results #addsearch-babbler .bab_tw {
+  clear: both;
+  padding:  20px 0 20px 160px;
+  background: transparent url( //addsearch.com/www/script/v2/bab_tw_48.png ) no-repeat 55px 50%;
+  border-bottom: 2px solid #ececec;
+}
+#addsearch-results #addsearch-babbler .bab_fb {
+  background: transparent url( //addsearch.com/www/script/v2/bab_fb_50.png ) no-repeat 55px 50%;
+}
+#addsearch-results.addsearch-m #addsearch-babbler .bab_tw {
+  padding-left: 10px;
+  background-image: none;
+}
+
+#addsearch-results #addsearch-babbler .bab_tw_last {
+  padding-bottom: 40px;
+}
+#addsearch-results #addsearch-babbler .bab_tw:hover {
+  background-color: rgba(16, 117, 212, 0.15);
+}
+#addsearch-results #addsearch-babbler .bab_tw span  {
+    display: block;
+    font-size: 13px;
+}
+
+  /* Name row */
+#addsearch-results #addsearch-babbler .bab_account {
+    display: block;
+    height: 30px;
+    margin-right: 6px;
+    padding-top: 4px;
+}
+#addsearch-results #addsearch-babbler .bab_account span { display: inline; padding: 0 4px 0 0; }
+#addsearch-results #addsearch-babbler .bab_name { font-weight: bold; margin-left: 8px; }
+#addsearch-results #addsearch-babbler .bab_tw_handle { opacity: 0.4; }
+
+#addsearch-results #addsearch-babbler  .bab_account img {
+  float: left;
+  margin-top: -4px;
+}
+
+  /* Date */
+#addsearch-results #addsearch-babbler .bab_time {
+  opacity: 0.4;
+}
+
+  /* Content */
+#addsearch-results #addsearch-babbler .bab_tw_content {
+  margin: 0 10px 0 0;
+}
+#addsearch-results #addsearch-babbler .bab_tw_content a {
+  color: rgb(16, 117, 212);
+}
+#addsearch-results #addsearch-babbler em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+  /* Action buttons (reply / retweet / favorite) */
+#addsearch-results #addsearch-babbler .bab_tw_actions {
+  float: right;
+  margin-right: 10px;
+  padding-right: 24px;
+  background: transparent url( //addsearch.com/www/script/v2/bab_tw_16.png ) no-repeat right 4px;
+}
+#addsearch-results.addsearch-m #addsearch-babbler .bab_tw_actions {
+  display: none;
+}
+#addsearch-results #addsearch-babbler .bab_tw_reply,
+#addsearch-results #addsearch-babbler .bab_tw_retweet,
+#addsearch-results #addsearch-babbler .bab_tw_favorite {
+    display: block; width: 16px; height: 16px;
+    margin-left: 2px;
+    float: left;
+    background: transparent url( //addsearch.com/www/script/v2/bab_twitter_buttons.png ) no-repeat 0 0;
+  }
+#addsearch-results #addsearch-babbler .bab_tw_reply:hover { background-position: -16px 0; }
+#addsearch-results #addsearch-babbler .bab_tw_retweet { background-position: -80px 0; }
+#addsearch-results #addsearch-babbler .bab_tw_retweet:hover { background-position: -96px 0; }
+#addsearch-results #addsearch-babbler .bab_tw_favorite { background-position: -32px 0; }
+#addsearch-results #addsearch-babbler .bab_tw_favorite:hover { background-position: -48px 0; }
